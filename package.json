@@ -1,0 +1,24 @@
+{
+  "name": "gou-date",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sebastianthomas/gou-date.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebastianthomas/gou-date/issues"
+  },
+  "homepage": "https://github.com/sebastianthomas/gou-date",
+  "devDependencies": {
+    "gulp-jade": "~1.0.0",
+    "gulp": "~3.8.11",
+    "gulp-less": "~3.0.1"
+  }
+}
