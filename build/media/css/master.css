@@ -1,0 +1,214 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+}
+a:active,
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+/*!
+ * Preboot v2
+ *
+ * Open sourced under MIT license by @mdo.
+ * Some variables and mixins from Bootstrap (Apache 2 license).
+ */
+body {
+  color: #808080;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+a {
+  color: #428bca;
+  text-decoration: none;
+}
+a:hover {
+  color: #2a6496;
+  text-decoration: underline;
+}
+.page {
+  width: 100%;
+  height: 100%;
+  max-width: 720px;
+  padding: 20px;
+  background-color: burlywood;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.date-picker-widget {
+  width: 100%;
+  max-width: 700px;
+  background-color: #e9d0af;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  *zoom: 1;
+}
+.date-picker-widget:before,
+.date-picker-widget:after {
+  content: " ";
+  display: table;
+  line-height: 0;
+}
+.date-picker-widget:after {
+  clear: both;
+}
+.date-picker-widget .legend {
+  float: left;
+}
+.date-picker-widget .legend ul li {
+  float: left;
+}
+.date-picker-widget .legend .instructions {
+  clear: both;
+}
+.date-picker-widget button {
+  float: right;
+}
+.date-picker-widget .date-picker-container {
+  padding-top: 12px;
+}
+.date-picker {
+  width: 200px;
+  height: 200px;
+  margin: 0 12px;
+  background-color: #fff;
+  padding-top: 12px;
+}
+.date-picker .month {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  margin: 0 12px;
+  background-color: #f0ad4e;
+}

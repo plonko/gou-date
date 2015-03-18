@@ -2,8 +2,19 @@ doctype html
 html
     head
         title Gou Date
-        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui')
-        link(rel='stylesheet', href='media/css/style.css')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, minimal-ui')
+        link(rel='stylesheet', href='media/css/master.css')
 
     body
-        | hello
+        .page
+            .date-picker-widget
+                .date-picker-container
+                    .date-picker
+                        .month April
+                .legend
+                    ul
+                        li Delivery
+                        li On hold
+                        li Delivery available
+                    .instructions Please remember to click save after you've made your changes
+                button

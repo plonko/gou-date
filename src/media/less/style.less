@@ -1,1 +1,78 @@
-//style.less
+// Variables
+
+// Colors
+@background: burlywood;
+
+// fonts
+@headings-font-weight: bold;
+
+// Dimensions
+@date-picker-indent: 12px;
+
+
+// Styles
+
+// Global
+
+body {
+    color: @text-color;
+    font-family: @font-family-base;
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+}
+
+a {
+    color: @link-color;
+    text-decoration: none;
+    &:hover {
+        color: @link-color-hover;
+        text-decoration: underline;
+    }
+}
+
+.page {
+    .square(100%);
+    max-width: 720px;
+    padding: 20px;
+    background-color: @background;
+    .center-block();
+}
+
+.date-picker-widget {
+    width: 100%;
+    max-width: 700px;
+    background-color: lighten(@background, 10%);
+    .center-block();
+        .clearfix();
+    .legend {
+        float: left;
+        ul li {
+            float: left;
+        }
+        .instructions {
+            clear: both;
+        }
+    }
+    button {
+        float: right;
+    }
+    .date-picker-container {
+        //background-color: #fff;
+        padding-top: @date-picker-indent;
+    }
+}
+
+.date-picker {
+    .square(200px);
+    margin: 0 @date-picker-indent;
+    background-color: #fff;
+    padding-top: @date-picker-indent;
+    .month {
+        font-weight: @headings-font-weight;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        margin: 0 @date-picker-indent;
+        background-color: @brand-warning;
+    }
+}
