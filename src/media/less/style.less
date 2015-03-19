@@ -2,6 +2,7 @@
 
 // Colors
 @background: burlywood;
+@text-color: @black-70;
 
 // fonts
 @headings-font-weight: bold;
@@ -41,32 +42,51 @@ a {
 .date-picker-widget {
     width: 100%;
     max-width: 700px;
+    padding: @date-picker-indent;
     background-color: lighten(@background, 10%);
     .center-block();
-        .clearfix();
+    .clearfix();
     .legend {
         float: left;
-        ul li {
-            float: left;
+        li {
+            margin-right: 5px;
+            &:before {
+                content: "";
+                .square(10px);
+                display: inline-block;
+                margin-right: 3px;
+                border-radius: 5px;
+            }
+            &.delivery:before {
+                background-color: @brand-success;
+            }
+            &.hold:before {
+                background-color: @brand-danger;
+            }
+            &.available:before {
+                background-color: @brand-info;
+            }
         }
         .instructions {
             clear: both;
+            margin-top: 4px;
         }
     }
     button {
         float: right;
     }
-    .date-picker-container {
-        //background-color: #fff;
-        padding-top: @date-picker-indent;
+    li {
+        display: inline-block;
     }
 }
 
+
+
 .date-picker {
     .square(200px);
-    margin: 0 @date-picker-indent;
-    background-color: #fff;
+    margin-bottom: @date-picker-indent;
     padding-top: @date-picker-indent;
+    background-color: #fff;
     .month {
         font-weight: @headings-font-weight;
         text-transform: uppercase;
@@ -74,5 +94,27 @@ a {
         color: #fff;
         margin: 0 @date-picker-indent;
         background-color: @brand-warning;
+    }
+    @blob-size: 23px; 
+    .days,
+    .dates {
+        margin: 6px 0 0 8px;
+        li {
+            .square(@blob-size);
+            text-align: center;
+            font-size: @font-size-small;
+        }
+    }
+    .dates li {
+        @blob-padding: 4px;
+        height: (@blob-size)-(@blob-padding);
+        padding-top: @blob-padding;
+        margin: 2px 0;
+        cursor: pointer;
+        background-color: #fff;
+        border-radius: 15px;
+        &:hover {
+            background-color: @brand-info;
+        }
     }
 }

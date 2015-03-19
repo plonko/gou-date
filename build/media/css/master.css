@@ -141,7 +141,7 @@ a:hover {
  * Some variables and mixins from Bootstrap (Apache 2 license).
  */
 body {
-  color: #808080;
+  color: #4d4d4d;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.4;
@@ -167,6 +167,7 @@ a:hover {
 .date-picker-widget {
   width: 100%;
   max-width: 700px;
+  padding: 12px;
   background-color: #e9d0af;
   display: block;
   margin-left: auto;
@@ -185,24 +186,42 @@ a:hover {
 .date-picker-widget .legend {
   float: left;
 }
-.date-picker-widget .legend ul li {
-  float: left;
+.date-picker-widget .legend li {
+  margin-right: 5px;
+}
+.date-picker-widget .legend li:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-right: 3px;
+  border-radius: 5px;
+}
+.date-picker-widget .legend li.delivery:before {
+  background-color: #5cb85c;
+}
+.date-picker-widget .legend li.hold:before {
+  background-color: #d9534f;
+}
+.date-picker-widget .legend li.available:before {
+  background-color: #5bc0de;
 }
 .date-picker-widget .legend .instructions {
   clear: both;
+  margin-top: 4px;
 }
 .date-picker-widget button {
   float: right;
 }
-.date-picker-widget .date-picker-container {
-  padding-top: 12px;
+.date-picker-widget li {
+  display: inline-block;
 }
 .date-picker {
   width: 200px;
   height: 200px;
-  margin: 0 12px;
-  background-color: #fff;
+  margin-bottom: 12px;
   padding-top: 12px;
+  background-color: #fff;
 }
 .date-picker .month {
   font-weight: bold;
@@ -211,4 +230,26 @@ a:hover {
   color: #fff;
   margin: 0 12px;
   background-color: #f0ad4e;
+}
+.date-picker .days,
+.date-picker .dates {
+  margin: 6px 0 0 8px;
+}
+.date-picker .days li,
+.date-picker .dates li {
+  width: 23px;
+  height: 23px;
+  text-align: center;
+  font-size: 11.9px;
+}
+.date-picker .dates li {
+  height: 19px;
+  padding-top: 4px;
+  margin: 2px 0;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 15px;
+}
+.date-picker .dates li:hover {
+  background-color: #5bc0de;
 }

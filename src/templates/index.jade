@@ -11,10 +11,22 @@ html
                 .date-picker-container
                     .date-picker
                         .month April
+                        ul.days
+                            li M
+                            li T
+                            li W
+                            li T
+                            li F
+                            li S
+                            li S
+                        - var i = 1
+                        ul.dates
+                            while i <= 31
+                                li= i++
                 .legend
                     ul
-                        li Delivery
-                        li On hold
-                        li Delivery available
+                        li.delivery Delivery
+                        li.hold On hold
+                        li.available Delivery available
                     .instructions Please remember to click save after you've made your changes
                 button
