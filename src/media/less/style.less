@@ -39,6 +39,7 @@ a {
     .center-block();
 }
 
+// The whole component
 .date-picker-widget {
     width: 100%;
     max-width: 700px;
@@ -75,18 +76,24 @@ a {
     button {
         float: right;
     }
+    // All lis are inline so far
     li {
         display: inline-block;
     }
 }
 
+.set-all {
+    margin-bottom: @date-picker-indent;
+}
 
 
+// The actual month box
 .date-picker {
     .square(200px);
-    margin-bottom: @date-picker-indent;
+    margin: 0 @date-picker-indent @date-picker-indent 0;
     padding-top: @date-picker-indent;
     background-color: #fff;
+    display: inline-block;
     .month {
         font-weight: @headings-font-weight;
         text-transform: uppercase;
@@ -110,11 +117,17 @@ a {
         height: (@blob-size)-(@blob-padding);
         padding-top: @blob-padding;
         margin: 2px 0;
-        cursor: pointer;
         background-color: #fff;
         border-radius: 15px;
-        &:hover {
+        &.delivery-day {
+            cursor: pointer;
             background-color: @brand-info;
+            &.set {
+                background-color: @brand-success;
+            }
+            &.hold {
+                background-color: @brand-danger;
+            }
         }
     }
 }

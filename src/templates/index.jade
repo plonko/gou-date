@@ -9,23 +9,34 @@ html
         .page
             .date-picker-widget
                 .date-picker-container
-                    .date-picker
-                        .month April
-                        ul.days
-                            li M
-                            li T
-                            li W
-                            li T
-                            li F
-                            li S
-                            li S
-                        - var i = 1
-                        ul.dates
-                            while i <= 31
-                                li= i++
+                    .set-all
+                        h4 I would like all deliveries on: 
+                        label Wednesday
+                            input(type='radio' name='setAll' value='weds')
+                        label Friday
+                            input(type='radio' name='setAll' value='fri')
+                    each month in ['March', 'April', 'May']
+                        .date-picker
+                            .month #{month} 2015
+                            ul.days
+                                li M
+                                li T
+                                li W
+                                li T
+                                li F
+                                li S
+                                li S
+                            - var i = 1
+                            - var days = ['mon', 'tues', 'weds', 'thu', 'fri', 'sat', 'sun'];
+                            ul.dates
+                                while i <= 28
+                                    ul.week
+                                        each day, index in days
+                                            - var dayClass = (index === 2 || index === 4 ? 'delivery-day '+day : day)
+                                            li(class=dayClass)= i++
                 .legend
                     ul
-                        li.delivery Delivery
+                        li.delivery Delivery set
                         li.hold On hold
                         li.available Delivery available
                     .instructions Please remember to click save after you've made your changes
