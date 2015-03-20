@@ -2,9 +2,9 @@ var gulp = require('gulp');
 var less = require('gulp-less');
 var jade = require('gulp-jade');
 
+var gutil = require('gulp-util');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
-var gutil = require('gulp-util');
 var source = require('gulp-sourcemaps');
 
 var jsLibs = ['src/media/js/libs/zepto.js'];
@@ -24,7 +24,7 @@ gulp.task('js-libs', function() {
     return gulp.src(jsLibs)
         .pipe(isProduction ? uglify().on('error', errorHandler) : gutil.noop())
         .pipe(concat('libs.js'))
-        .pipe(gulp.dest('./build/js/'));
+        .pipe(gulp.dest('./build/media/js/'));
 });
 
 gulp.task('js-scripts', function() {
@@ -33,7 +33,7 @@ gulp.task('js-scripts', function() {
             .pipe(isProduction ? uglify().on('error', errorHandler) : gutil.noop())
             .pipe(concat('script.js'))
         .pipe(sourceMap ? source.write() : gutil.noop())
-        .pipe(gulp.dest('./build/js/'));
+        .pipe(gulp.dest('./build/media/js/'));
 });
 
 gulp.task('less', function () {
