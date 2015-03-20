@@ -42,7 +42,7 @@ a {
 // The whole component
 .date-picker-widget {
     width: 100%;
-    max-width: 700px;
+    max-width: 632px;
     padding: @date-picker-indent;
     background-color: lighten(@background, 10%);
     .center-block();
@@ -73,8 +73,18 @@ a {
             margin-top: 4px;
         }
     }
-    button {
+    .submit {
         float: right;
+        border: 0;
+        background-color: @brand-primary;
+        color: #fff;
+        font-size: @font-size-large;
+        border-radius: 3px;
+        padding: 5px 10px;
+        cursor: pointer;
+        &:hover {
+            background-color: lighten(@brand-primary, 5%);
+        }
     }
     // All lis are inline so far
     li {
@@ -112,6 +122,8 @@ a {
             font-size: @font-size-small;
         }
     }
+
+    // Each date number
     .dates li {
         @blob-padding: 4px;
         height: (@blob-size)-(@blob-padding);
@@ -122,6 +134,9 @@ a {
         &.delivery-day {
             cursor: pointer;
             background-color: @brand-info;
+            &:hover {
+                background-color: lighten(@brand-info, 10%);
+            }
             &.set {
                 background-color: @brand-success;
             }
@@ -130,4 +145,16 @@ a {
             }
         }
     }
+    &:last-child {
+        float: right;
+        margin-right: 0;
+    }
+}
+
+.console {
+    font-family: @font-family-monospace;
+    width: 600px;
+    margin: 50px auto;
+    background-color: @black-10;
+    padding: 40px;
 }

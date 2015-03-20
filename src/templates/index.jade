@@ -17,7 +17,7 @@ html
                             input(type='radio' name='setAll' value='fri')
                     each month in ['March', 'April', 'May']
                         .date-picker
-                            .month #{month} 2015
+                            .month(data-month=month.toLowerCase()) #{month} 2015
                             ul.days
                                 li M
                                 li T
@@ -40,6 +40,7 @@ html
                         li.hold On hold
                         li.available Delivery available
                     .instructions Please remember to click save after you've made your changes
-                button
+                a(class='submit') Save
+        .console
         script(src='media/js/libs.js')
         script(src='media/js/script.js')
